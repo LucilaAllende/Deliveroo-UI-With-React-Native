@@ -1,30 +1,8 @@
 import Colors from '@/constants/Colors';
 import { Ionicons } from '@expo/vector-icons';
-import { Link } from 'expo-router';
 import React from 'react';
 import { Text, SafeAreaView, StyleSheet, View, TouchableOpacity, Image } from 'react-native';
-import { TextInput } from 'react-native-gesture-handler';
-
-const SearchBar = () => {
-  return (
-    <View style={styles.searchContainer}>
-      <View style={styles.searchSection} >
-        <View style={styles.searchField}>
-          <Ionicons name="ios-search" size={20} color={Colors.medium} style={styles.searchIcon} />
-          <TextInput
-            style={styles.inputSearch}
-            placeholder="Restaurants, groceries, dishes"
-          />
-        </View>
-        <Link href={'/'} asChild>
-          <TouchableOpacity  style={styles.optionButton}>
-            <Ionicons name="options-outline" size={20} color={Colors.primary} />
-          </TouchableOpacity>
-        </Link>
-      </View>
-    </View>
-  );
-}
+import SearchBar from './SearchBar';
 
 const CustomHeader = () => {
   return (
@@ -91,37 +69,6 @@ const styles = StyleSheet.create({
     padding: 10,
     borderRadius: 50,
   },
-  searchContainer: {
-    height: 60,
-    backgroundColor: '#fff',
-  },
-  searchSection: {
-    flexDirection: 'row',
-    gap: 10,
-    flex: 1,
-    paddingHorizontal: 20,
-    alignItems: 'center',
-  },
-  searchField: {
-    flex: 1,
-    backgroundColor: Colors.lightGrey,
-    borderRadius: 8,
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  optionButton: {
-    padding: 10,
-    borderRadius: 50,
-  },
-  searchIcon: {
-    paddingLeft: 10
-  },
-  inputSearch:{
-    padding: 10,
-    color: Colors.mediumDark,
-  }
 });
-
-
 
 export default CustomHeader;
