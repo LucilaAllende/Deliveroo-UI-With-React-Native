@@ -3,15 +3,14 @@ import { Ionicons } from '@expo/vector-icons';
 import { StyleSheet, View, TouchableOpacity, TextInput } from 'react-native';
 import Colors from '@/constants/Colors';
 
-
 const SearchBar = () => {
   return (
-    <View style={styles.searchContainer}>
-      <View style={styles.searchSection} >
-        <View style={styles.searchField}>
-          <Ionicons name="ios-search" size={20} color={Colors.medium} style={styles.searchIcon} />
+    <View style={styles.container}>
+      <View style={styles.section} >
+        <View style={styles.inputContainer}>
+          <Ionicons name="ios-search" size={20} color={Colors.medium} style={styles.icon} />
           <TextInput
-            style={styles.inputSearch}
+            style={styles.input}
             placeholder="Restaurants, groceries, dishes"
           />
         </View>
@@ -26,28 +25,29 @@ const SearchBar = () => {
 }
 
 const styles = StyleSheet.create({
-  searchContainer: {
+  container: {
     height: 60,
     backgroundColor: '#fff',
   },
-  searchSection: {
+  section: {
     flexDirection: 'row',
     gap: 10,
     flex: 1,
     paddingHorizontal: 20,
     alignItems: 'center',
   },
-  searchField: {
+  inputContainer: {
     flex: 1,
     backgroundColor: Colors.lightGrey,
     borderRadius: 8,
     flexDirection: 'row',
     alignItems: 'center',
   },
-  searchIcon: {
+  icon: {
     paddingLeft: 10
   },
-  inputSearch:{
+  input:{
+    flex: 1,
     padding: 10,
     color: Colors.mediumDark,
   },
