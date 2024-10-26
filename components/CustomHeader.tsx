@@ -17,7 +17,7 @@ const CustomHeader = () => {
         <TouchableOpacity style={styles.titleContainer} >
           <Text style={styles.title} >Delivery · Now</Text>
           <View style={styles.subtitleContainer}>
-            <Text style={styles.subtitle}>Your location</Text>
+            <Text style={styles.subtitle}>Selected location</Text>
             <Ionicons name="chevron-down" size={20} color={Colors.primary} />
           </View>
         </TouchableOpacity>
