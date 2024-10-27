@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { StyleSheet, View, TouchableOpacity, TextInput } from 'react-native';
@@ -8,7 +9,7 @@ const SearchBar = () => {
     <View style={styles.container}>
       <View style={styles.section} >
         <View style={styles.inputContainer}>
-          <Ionicons name="ios-search" size={20} color={Colors.medium} style={styles.icon} />
+          <Ionicons name="search" size={20} color={Colors.medium} style={styles.icon} />
           <TextInput
             style={styles.input}
             placeholder="Restaurants, groceries, dishes"

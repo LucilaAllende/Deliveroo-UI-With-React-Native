@@ -1,14 +1,22 @@
 import Colors from '@/constants/Colors';
 import { Ionicons } from '@expo/vector-icons';
-import React from 'react';
+import React, { useState } from 'react';
 import { Text, SafeAreaView, StyleSheet, View, TouchableOpacity, Image } from 'react-native';
 import SearchBar from './SearchBar';
+import CustomModalHeader from './CustomModalHeader';
 
 const CustomHeader = () => {
+  const [isModalVisible, setIsModalVisible] = useState(false);
+
+  const toggleModal = () => {
+    setIsModalVisible(!isModalVisible);
+  };
+
   return (
     <SafeAreaView style={styles.safeArea}>
+      <CustomModalHeader isVisible={isModalVisible} onClose={toggleModal} />
       <View style={styles.container}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={toggleModal} >
           <Image 
             style={styles.bike}
             source={require('@/assets/images/bike.png')} 
