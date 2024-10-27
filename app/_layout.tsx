@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { Stack } from 'expo-router';
 import CustomHeader from '@/components/CustomHeader';
 
@@ -8,10 +10,10 @@ export const unstable_settings = {
 
 export default function RootLayoutNav() {
   return (
-      <Stack>
-        <Stack.Screen name="index" options={{
-          header: () => <CustomHeader />,
-        }} />
-      </Stack>
+    <Stack>
+      <Stack.Screen name="index" options={{
+        header: () => <CustomHeader />,
+      }} />
+    </Stack>
   );
 }
